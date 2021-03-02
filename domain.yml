@@ -1,0 +1,117 @@
+version: '2.0'
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- affirm:
+    use_entities: true
+- deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- bot_challenge:
+    use_entities: true
+- know_about_cancer:
+    use_entities: true
+- small:
+    use_entities: true
+- big:
+    use_entities: true
+- order_name_veg:
+    use_entities: true
+- order_name_non_veg:
+    use_entities: true
+- non_veg:
+    use_entities: true
+- more_info:
+    use_entities: true
+- many_types:
+    use_entities: true
+- know_more:
+    use_entities: true
+- text_sar:
+    use_entities: true
+- video_sar:
+    use_entities: true
+- thanks:
+    use_entities: true
+entities: []
+slots: {}
+responses:
+  utter_info:
+  - text: Here is the link to [website](https://www.google.com/)
+  utter_botgreet:
+  - text: How can i help you ?
+  utter_cancer_explain:
+  - image: https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/articles/health_tools/bladder_cancer_overview_slideshow/1800ss_princ_rm_photo_illustration_of_bladder_cancer.jpg?resize=650px:*
+    text: Cancer is a disease caused when cells divide uncontrollably and spread into surrounding tissues. Cancer is caused by changes to DNA.To know more refer [this](https://www.youtube.com/watch?v=FtZNN5PNLlA&ab_channel=ArmandoHasudungan)
+  utter_sym_risk:
+  - buttons:
+    - payload: /text_sar
+      title: Symptoms
+    - payload: /video_sar
+      title: Statistics
+    text: Please Select Any one.
+  utter_text_sar:
+  - image: https://www.oncoplus.co.in/wp-content/uploads/2020/07/type-of-sarcoma.jpg
+    text: Refer [this](https://www.mayoclinic.org/diseases-conditions/sarcoma/symptoms-causes/syc-20351048)
+  utter_video_sar:
+  - image: https://www.roche.com/dam/jcr:8d802056-9de8-486c-8618-e7cd26f28073/en/five-years-survival-740.png
+    text: Refer [this_is](https://www.cancer.net/cancer-types/bladder-cancer/statistics)
+  utter_about_cancer:
+  - buttons:
+    - payload: /small
+      title: Sarcoma
+    - payload: /big
+      title: Lymphoma
+    text: Please Select Any one.
+  utter_small:
+  - image: https://westcancercenter.org/wp-content/uploads/2018/11/diagram-sarcoma.png
+    text: A sarcoma is considered stage IV when it has spread to distant parts of the body. Stage IV sarcomas are rarely curable. But some patients may be cured if the main (primary) tumor and all of the areas of cancer spread (metastases) can be removed by surgery
+  utter_non_veg:
+  - text: we have egg curry,chicken butter masala.
+  utter_anythingelse:
+  - text: Is there any thing else?
+  utter_thanks:
+  - text: Thanks. We will get your order shortly.
+  utter_greet:
+  - text: Hey! How are you?
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+actions:
+- utter_botgreet
+- utter_about_cancer
+- utter_small
+- utter_non_veg
+- utter_anythingelse
+- utter_thanks
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_info
+- utter_cancer_explain
+- utter_sym_risk
+- utter_text_sar
+- utter_video_sar
+forms: {}
+e2e_actions: []
