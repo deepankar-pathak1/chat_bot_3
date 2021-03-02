@@ -1,0 +1,43 @@
+version: "2.0"
+
+stories:
+
+- story: happy veg path
+  steps:
+  - intent: greet
+  - action: utter_botgreet
+  - intent: know_about_cancer
+  - action: utter_cancer_explain
+  - intent: many_types
+  - action: utter_about_cancer
+  - intent: small
+  - action: utter_small
+  - action: utter_anythingelse
+  - intent: affirm
+  - action: utter_sym_risk
+  - intent: text_sar
+  - action: utter_text_sar
+  - intent: thanks 
+  - action: utter_thanks
+
+- story: happy veg path
+  steps:
+  - intent: greet
+  - action: utter_botgreet
+  - intent: know_about_cancer
+  - action: utter_cancer_explain
+  - intent: many_types
+  - action: utter_about_cancer
+  - intent: small
+  - action: utter_small
+  - action: utter_anythingelse
+  - intent: affirm
+  - action: utter_sym_risk
+  - intent: video_sar
+  - action: utter_video_sar
+  - intent: thanks 
+  - action: utter_thanks
+
+
+
+
